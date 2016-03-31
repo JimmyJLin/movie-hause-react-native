@@ -47,7 +47,11 @@ class Dashboard extends React.Component{
   }
 
   goToMovie(){
-
+    this.props.navigator.push({
+      component: Movie,
+      title: 'Movie Detail Page',
+      passProps: {movieInfo: this.props.movieInfo}
+    })
   }
 
   goToSaved(){
@@ -55,7 +59,7 @@ class Dashboard extends React.Component{
   }
 
   goToEdit(){
-    
+
   }
 
   render(){
